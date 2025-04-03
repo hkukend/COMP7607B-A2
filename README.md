@@ -26,7 +26,7 @@ Understanding the full lifecycle of language model development is crucial for se
 
 ### 1.2. Language Model Training Pipeline
 
-Training a language model involves several distinct phases, each building upon the previous one, in this assignment, we will focus on the translation task (English to Chinese). The pipeline consists of:
+Training a language model involves several distinct phases, each building upon the previous one, in this assignment, we will focus on the translation task (English to Traditional Chinese). The pipeline consists of:
 
 * **Pretraining:** Teaching the model to predict the next token in a sequence using a large bilingual corpus of text data
 * **Supervised Fine-Tuning (SFT):** Refining the model's translation capabilities in general domains
@@ -232,10 +232,10 @@ Tune the hyperparameters in each script to achieve the best performance.
 Your submission will be evaluated based on:
 
 1. **Code Implementation (30%):** Correctness and quality of your code implementations
-2. **Pretraining Perplexity (10%):** Perplexity of your pretrained model on the validation set
-2. **SFT Translation Quality (20%):** COMET score for general text using your SFT weights
-3. **Financial Translation (20%):** COMET score for financial text using your LoRA weights
-4. **DPO Financial Translation (20%):** COMET score for financial text using your DPO weights
+2. **Pre-training Perplexity (10%):** Perplexity of your pretrained model on the validation set
+3. **SFT Translation Quality (20%):** COMET score for general text using your SFT weights
+4. **Financial Translation (20%):** COMET score for general text using your LoRA weights
+5. **DPO Financial Translation (20%):** COMET score for financial text using your DPO weights
 
 We will execute the `run.sh` script to rerun the training scripts with the your datasets and evaluate the performance on our test set.
 
@@ -246,7 +246,11 @@ We will execute the `run.sh` script to rerun the training scripts with the your 
 * COMET score (financial): > 0.75
 * COMET score (DPO): > 0.80
 
-**!! Important !!** Accessability of your datasets is very important. If the datasets are not accessible or well-organized, you can only get scores from code implementation grade.
+**Important:**
+
+1. Dataset Accessibility: Ensuring your datasets are accessible and well-organized is crucial. If they are not, you may only receive credit for the code implementation, regardless of model performance.
+2. Translation Direction: The required translation direction is from English to Traditional Chinese. If your collected dataset is in Simplified Chinese, please convert it to Traditional Chinese. Note that model performance will be evaluated **only** on Traditional Chinese data, so this is essential.
+3. Dataset Format: Please strictly follow the provided example format when preparing your dataset.
 
 ---
 
