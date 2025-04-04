@@ -227,24 +227,26 @@ Tune the hyperparameters in each script to achieve the best performance.
 └── run.sh             # Shell script to run all training scripts
 ```
 
-## 6. Grading Criteria
+## 6. Grading System
 
 Your submission will be evaluated based on:
 
 1. **Code Implementation (30%):** Correctness and quality of your code implementations
-2. **Pretraining Perplexity (10%):** Perplexity of your pretrained model on the validation set
-2. **SFT Translation Quality (20%):** COMET score for general text using your SFT weights
-3. **Financial Translation (20%):** COMET score for financial text using your LoRA weights
-4. **DPO Financial Translation (20%):** COMET score for financial text using your DPO weights
+2. **Pre-training Perplexity (10%):** Perplexity of your pretrained model on the validation set
+3. **SFT Translation Quality (20%):** COMET score for general text using your SFT weights
+4. **Financial Translation (20%):** COMET score for financial text using your LoRA weights
+5. **DPO Financial Translation (20%):** COMET score for financial text using your DPO weights
 
 We will execute the `run.sh` script to rerun the training scripts with the your datasets and evaluate the performance on our test set.
 
-**Baseline Targets:**
+**Grading Criterion:**
 
-* Perplexity: < 15.0 on validation set
-* COMET score (general): > 0.70
-* COMET score (financial): > 0.75
-* COMET score (DPO): > 0.80
+* Perplexity (Pre-train): < 15.0 on validation set
+* COMET score (SFT): > 0.60
+* COMET score (Lora): > 0.65
+* COMET score (DPO): > 0.70
+
+The following details explain how the grading system works, using the SFT task as an example: You will receive the full grade (100) for the task if your COMET score reaches 0.70. For COMET scores below 0.70, we will calculate your grade using a ratio. For instance, if you achieve a COMET score of 0.35, your score for the task will be calculated as 0.35 / 0.70, which equals 0.50, or 50% of the total grade.
 
 **!! Important !!** Accessability of your datasets is very important. If the datasets are not accessible or well-organized, you can only get scores from code implementation grade.
 
