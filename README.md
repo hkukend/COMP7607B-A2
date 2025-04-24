@@ -218,12 +218,14 @@ Tune the hyperparameters in each script to achieve the best performance.
 │ └── lora.py          # LoRA implementation
 ├── test/              # Test set for evaluation
 ├── dataset.py         # Dataset for each training phase
+├── evaluator.py       # Evaluation script
 ├── trainer.py         # Trainer for each training phase
 ├── train_pretrain.py  # Pretraining script
 ├── train_sft.py       # Supervised fine-tuning script
 ├── train_dpo.py       # Direct preference optimization script
 ├── train_lora.py      # LoRA training script
 ├── utils.py           # Utility functions
+├── requirements.txt   # Python dependencies
 └── run.sh             # Shell script to run all training scripts
 ```
 
